@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device OS Redirect</title>
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+</head>
+<body>
+    <script>
+        // Detect the user's device OS
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isIOS = /iphone|ipad|ipod/.test(userAgent);
+        const isAndroid = /android/.test(userAgent);
+
+        // Define your URLs
+        const url1 = 'https://apps.apple.com/in/app/sniphat/id6475980275';
+        const url2 = 'https://play.google.com/store/apps/details?id=com.sniphat.version1';
+        const url3 = 'https://play.google.com/store/apps/details?id=com.sniphat.version1';
+
+        // Redirect based on the detected OS
+        if (isIOS) {
+            window.location.href = url1;
+        } else if (isAndroid) {
+            window.location.href = url2;
+        } else {
+            window.location.href = url3;
+        }
+    </script>
+</body>
+</html>
